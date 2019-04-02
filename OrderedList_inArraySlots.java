@@ -1,4 +1,3 @@
-
 public class OrderedList_inArraySlots {
 	
 	private List_inArraySlots arrayList;
@@ -27,25 +26,22 @@ public class OrderedList_inArraySlots {
     }
 	
 	// Adds value to the ordered list
-    public boolean add( int value) {
-		
+    public boolean add( int value) { 
+	
 		if(arrayList.size() == 0) {
-			arrayList.add(value);
+			return arrayList.add(value);
+		}
+		
+		else{
+			for (int index = 0; index < arrayList.size(); index++){
+				if (arrayList.get(index) >= value){
+					arrayList.add(index, value);
+					return true;
+				}
+			}
         } 
 		
-		else {
-
-            for (int index = 0; index < arrayList.size(); index++) {
-				if (value >= arrayList.get(index)){
-					
-					arrayList.add(index , value);
-					return true;
-					
-				}
-			}			
-        }
-		
-        return true;
+		return arrayList.add(value);
 	}
 
      

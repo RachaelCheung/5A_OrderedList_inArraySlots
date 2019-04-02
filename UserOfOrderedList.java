@@ -12,13 +12,15 @@ public class UserOfOrderedList {
 		 list.add(19);
 		 list.add(7);
 		 list.add(14);
+		 System.out.println("test add:");
          System.out.println( "number of elements: " + list.size() );
          System.out.println( "list: " + list);
 		 
 		 
-		 //list.remove(1);
-         // System.out.println( "number of elements: " + list.size() );
-         // System.out.println( "list: " + list);
+		 list.remove(1);
+		 System.out.println("test remove:");
+         System.out.println( "number of elements: " + list.size() );
+         System.out.println( "list: " + list);
 		
 	 }
 
